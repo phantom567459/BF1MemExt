@@ -8,9 +8,9 @@ Tool for patching SWBF1 (2004) to extend it's memory limits.
 ## Supported Versions
 
 - [SWBFspy Patched Version](https://info.swbfgamers.com/downloads.html)
->> Using the link above, the disk version of the game or the Steam version of the game can be patched.
+> Using the link above, the disk version of the game or the Steam version of the game can be patched.
 - SPTest (The version of the game used to debug mods. Found in the modtools.)
->> Not completely supported yet
+> Not completely supported yet
 
 If you're interested in seeing another version of the game supported feel free to open an Issue (or +1 an Issue if someone else has already asked for your version to be supported).
 
