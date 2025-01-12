@@ -116,7 +116,7 @@ static auto RegisterWindowClass() noexcept -> ATOM
 
 static bool InitWindows() noexcept
 {
-   hwndMain = CreateWindowExW(0, className, L"BF2 Memory Extender", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT,
+   hwndMain = CreateWindowExW(0, className, L"BF1 Memory Extender", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT,
                               CW_USEDEFAULT, 440, 256, nullptr, nullptr, hInstance, nullptr);
 
    if (not hwndMain) return false;

@@ -4,8 +4,8 @@
 
 #include "slim_vector.hpp"
 
-#define PATCH_COUNT 3
-#define EXE_COUNT 3
+#define PATCH_COUNT 4
+#define EXE_COUNT 2
 
 struct patch {
    uint32_t address = 0;
