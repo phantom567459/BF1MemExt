@@ -5,9 +5,9 @@ Tool for patching SWBF1 (2004) to extend it's memory limits.
 - DLC Mission Limit Extension. Increased from 50 to 4096 (theoretically). This lets more mods be installed at once, provided that don't conflict and no other limits are hit.
 - Spawn Screen Fix for BF1.  Allows up to 10 units on the Spawn Screen simultaneously when combined with updates to ifs_pc_spawnselect Lua file in common.lvl
 - Hi-resolution unit limit raised to 78.  This requires running the program, but also running the included "Make_patches.py" file in this way:
-    -py make_patches.py <exe name without bracket> <new exe name>
-    -This final part increases the animation counters so that the units do not slide.
-    -I do NOT intend this to be a permanent way to run this, but I plan to fold this into a different structure at a later date.
+    - py make_patches.py exe_name new_exe_name
+    - This final part increases the animation counters so that the units do not slide.
+    - I do NOT intend this to be a permanent way to run this, but I plan to fold this into a different structure at a later date.
 
 ## Supported Versions
 
