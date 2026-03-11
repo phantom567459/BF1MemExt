@@ -14,9 +14,17 @@ struct patch {
    bool value_is_ext_section_relative_address = false;
 };
 
+struct code_patch {
+   uint32_t address = 0;
+   const uint8_t* expected_bytes = nullptr;
+   const uint8_t* replacement_bytes = nullptr;
+   uint32_t length = 0;
+};
+
 struct patch_set {
    const char* name = "";
    slim_vector<patch> patches;
+   slim_vector<code_patch> code_patches;
 };
 
 struct exe_patch_list {

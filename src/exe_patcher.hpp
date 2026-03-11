@@ -17,6 +17,8 @@ struct exe_patcher {
 
    [[nodiscard]] bool apply(const patch& patch);
 
+   [[nodiscard]] bool apply(const code_patch& patch);
+
 private:
    uint8_t* _data = nullptr;
    size_t _size = 0;

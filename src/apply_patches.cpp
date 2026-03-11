@@ -44,6 +44,14 @@ bool apply(const char* file_path, int (*print)(const char* format, ...)) noexcep
                return false;
             }
          }
+
+         for (const code_patch& cp : set.code_patches) {
+            if (not editor.apply(cp)) {
+               print("Failed to apply code patch. %s is unmodified.\r\n", file_path);
+
+               return false;
+            }
+         }
       }
 
       break;

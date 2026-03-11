@@ -232,6 +232,31 @@ bool exe_patcher::apply(const patch& patch)
    return true;
 }
 
+bool exe_patcher::apply(const code_patch& patch)
+{
+   if (not _data) return false;
+   if (not patch.expected_bytes or not patch.replacement_bytes) return false;
+   if (patch.length == 0) return false;
+
+   const uint32_t offset = patch.address;
+
+   if (not check_range(offset, patch.length)) return false;
+
+   const bool already_patched =
+      memcmp(&_data[offset], patch.replacement_bytes, patch.length) == 0;
+
+   if (already_patched) return true;
+
+   const bool expected =
+      memcmp(&_data[offset], patch.expected_bytes, patch.length) == 0;
+
+   if (not expected) return false;
+
+   memcpy(&_data[offset], patch.replacement_bytes, patch.length);
+
+   return true;
+}
+
 bool exe_patcher::check_range(size_t offset, size_t size) const noexcept
 {
    // Bounds check
